@@ -1,2 +1,2 @@
-# WEB4012-Assignment
-Website bán hàng bằng Laravel Framework
+# Thangvvpd02424_WEB4012_Assignment
+Assignment

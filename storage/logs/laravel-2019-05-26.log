@@ -1,0 +1,352 @@
+[2019-05-26 08:32:43] local.ERROR: SQLSTATE[HY000] [1049] Unknown database 'shop_web4012' (SQL: select * from information_schema.tables where table_schema = shop_web4012 and table_name = migrations and table_type = 'BASE TABLE') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'shop_web4012' (SQL: select * from information_schema.tables where table_schema = shop_web4012 and table_name = migrations and table_type = 'BASE TABLE') at C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'shop_web4012' at C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php:70)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(333): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(18): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#4 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(583): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(91): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(63): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#8 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#9 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#11 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#12 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#13 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#14 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#15 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(908): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#16 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(269): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#17 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 {main}
+"} 
+[2019-05-26 08:34:16] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `users` add unique `users_email_unique`(`email`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes (SQL: alter table `users` add unique `users_email_unique`(`email`)) at C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes at C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `us...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `us...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(97): Illuminate\\Database\\Connection->statement('alter table `us...')
+#3 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(278): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(167): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(237): Illuminate\\Database\\Schema\\Builder->create('users', Object(Closure))
+#6 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\database\\migrations\\2014_10_12_000000_create_users_table.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(385): CreateUsersTable->up()
+#8 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(197): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateUsersTable), 'up')
+#10 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(164): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\xampp\\\\htdocs...', 1, false)
+#11 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(111): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#15 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(908): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(269): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2019-05-26 08:36:08] local.ERROR: Class 'App\Providers\Schema' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'App\\Providers\\Schema' not found at C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\app\\Providers\\AppServiceProvider.php:26)
+[stacktrace]
+#0 [internal function]: App\\Providers\\AppServiceProvider->boot()
+#1 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#2 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#4 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#5 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(817): Illuminate\\Container\\Container->call(Array)
+#6 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(800): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#7 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 17)
+#8 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(801): array_walk(Array, Object(Closure))
+#9 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#10 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(210): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#11 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#12 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#13 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 {main}
+"} 
+[2019-05-26 13:27:17] local.ERROR: Command "test" is not defined.
+
+Did you mean this?
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"test\" is not defined.
+
+Did you mean this?
+    make:test at C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php:639)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Command\\HelpCommand.php(70): Symfony\\Component\\Console\\Application->find('test')
+#1 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Command\\Command.php(255): Symfony\\Component\\Console\\Command\\HelpCommand->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(908): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(269): Symfony\\Component\\Console\\Application->doRunCommand(Object(Symfony\\Component\\Console\\Command\\HelpCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#6 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2019-05-26 13:28:30] local.ERROR: Command "make:migretion" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:migretion\" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test at C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php:639)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(233): Symfony\\Component\\Console\\Application->find('make:migretion')
+#1 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2019-05-26 13:50:03] local.ERROR: SQLSTATE[HY000]: General error: 1005 Can't create table `shop_web4012`.`#sql-103c_18` (errno: 150 "Foreign key constraint is incorrectly formed") (SQL: alter table `sub_category` add constraint `sub_category_category_id_foreign` foreign key (`category_id`) references `categories` (`id`) on delete cascade) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `shop_web4012`.`#sql-103c_18` (errno: 150 \"Foreign key constraint is incorrectly formed\") (SQL: alter table `sub_category` add constraint `sub_category_category_id_foreign` foreign key (`category_id`) references `categories` (`id`) on delete cascade) at C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `shop_web4012`.`#sql-103c_18` (errno: 150 \"Foreign key constraint is incorrectly formed\") at C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `su...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `su...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(97): Illuminate\\Database\\Connection->statement('alter table `su...')
+#3 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(278): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(167): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(237): Illuminate\\Database\\Schema\\Builder->create('sub_category', Object(Closure))
+#6 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\database\\migrations\\2019_05_26_134531_create_sub_category_table.php(21): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(385): CreateSubCategoryTable->up()
+#8 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(197): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateSubCategoryTable), 'up')
+#10 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(164): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\xampp\\\\htdocs...', 2, false)
+#11 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(111): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#15 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(908): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(269): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2019-05-26 13:52:13] local.ERROR: Command "make:rollback" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test
+    migrate:rollback {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:rollback\" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:channel
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test
+    migrate:rollback at C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php:639)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(233): Symfony\\Component\\Console\\Application->find('make:rollback')
+#1 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2019-05-26 13:53:39] local.ERROR: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'sub_category' already exists (SQL: create table `sub_category` (`id` bigint unsigned not null auto_increment primary key, `category_id` int unsigned not null, `sub_name` varchar(191) not null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'sub_category' already exists (SQL: create table `sub_category` (`id` bigint unsigned not null auto_increment primary key, `category_id` int unsigned not null, `sub_name` varchar(191) not null) default character set utf8mb4 collate 'utf8mb4_unicode_ci') at C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: 42S01): SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'sub_category' already exists at C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('create table `s...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('create table `s...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(97): Illuminate\\Database\\Connection->statement('create table `s...')
+#3 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(278): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(167): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(237): Illuminate\\Database\\Schema\\Builder->create('sub_category', Object(Closure))
+#6 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\database\\migrations\\2019_05_26_134531_create_sub_category_table.php(21): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(385): CreateSubCategoryTable->up()
+#8 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(197): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateSubCategoryTable), 'up')
+#10 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(164): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\xampp\\\\htdocs...', 2, false)
+#11 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(111): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#15 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(908): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(269): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2019-05-26 13:58:03] local.ERROR: SQLSTATE[HY000]: General error: 1005 Can't create table `shop_web4012`.`#sql-103c_1d` (errno: 150 "Foreign key constraint is incorrectly formed") (SQL: alter table `sub_category` add constraint `sub_category_category_id_foreign` foreign key (`category_id`) references `categories` (`id`) on delete cascade) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `shop_web4012`.`#sql-103c_1d` (errno: 150 \"Foreign key constraint is incorrectly formed\") (SQL: alter table `sub_category` add constraint `sub_category_category_id_foreign` foreign key (`category_id`) references `categories` (`id`) on delete cascade) at C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `shop_web4012`.`#sql-103c_1d` (errno: 150 \"Foreign key constraint is incorrectly formed\") at C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `su...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `su...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(97): Illuminate\\Database\\Connection->statement('alter table `su...')
+#3 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(278): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(167): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(237): Illuminate\\Database\\Schema\\Builder->create('sub_category', Object(Closure))
+#6 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\database\\migrations\\2019_05_26_134531_create_sub_category_table.php(21): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(385): CreateSubCategoryTable->up()
+#8 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(197): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateSubCategoryTable), 'up')
+#10 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(164): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\xampp\\\\htdocs...', 1, false)
+#11 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(111): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#15 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#20 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(198): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#22 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(61): Illuminate\\Console\\Command->call('migrate', Array)
+#23 [internal function]: Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#24 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#25 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#27 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#28 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#29 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(908): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(269): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 {main}
+"} 
+[2019-05-26 14:00:39] local.ERROR: SQLSTATE[HY000]: General error: 1005 Can't create table `shop_web4012`.`#sql-103c_20` (errno: 150 "Foreign key constraint is incorrectly formed") (SQL: alter table `sub_category` add constraint `sub_category_category_id_foreign` foreign key (`category_id`) references `categories` (`id`) on delete cascade) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `shop_web4012`.`#sql-103c_20` (errno: 150 \"Foreign key constraint is incorrectly formed\") (SQL: alter table `sub_category` add constraint `sub_category_category_id_foreign` foreign key (`category_id`) references `categories` (`id`) on delete cascade) at C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1005 Can't create table `shop_web4012`.`#sql-103c_20` (errno: 150 \"Foreign key constraint is incorrectly formed\") at C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:458)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `su...', Array, Object(Closure))
+#1 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(459): Illuminate\\Database\\Connection->run('alter table `su...', Array, Object(Closure))
+#2 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Blueprint.php(97): Illuminate\\Database\\Connection->statement('alter table `su...')
+#3 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(278): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\Builder.php(167): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(237): Illuminate\\Database\\Schema\\Builder->create('sub_category', Object(Closure))
+#6 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\database\\migrations\\2019_05_26_134531_create_sub_category_table.php(21): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(385): CreateSubCategoryTable->up()
+#8 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(394): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(197): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateSubCategoryTable), 'up')
+#10 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(164): Illuminate\\Database\\Migrations\\Migrator->runUp('C:\\\\xampp\\\\htdocs...', 1, false)
+#11 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(111): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(71): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#15 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#20 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#21 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(198): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
+#22 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\FreshCommand.php(61): Illuminate\\Console\\Command->call('migrate', Array)
+#23 [internal function]: Illuminate\\Database\\Console\\Migrations\\FreshCommand->handle()
+#24 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#25 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#26 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#27 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#28 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(183): Illuminate\\Container\\Container->call(Array)
+#29 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Command\\Command.php(255): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#31 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(908): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(269): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\FreshCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(90): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(133): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 C:\\xampp\\htdocs\\Thangvvpd02424_WEB4012_Assignment\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#37 {main}
+"} 

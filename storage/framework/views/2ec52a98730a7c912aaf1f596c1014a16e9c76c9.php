@@ -1,0 +1,81 @@
+<?php $__env->startSection('content'); ?>
+    <?php if(count($errors) > 0): ?>
+        <div class="alert alert-danger">
+            <ul>
+                <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <li><?php echo e($error); ?></li>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </ul>
+        </div>
+    <?php endif; ?>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-rose">
+                            <h4 class="card-title ">THÊM SẢN PHẨM</h4>
+                        </div>
+                        <div class="card-body">
+                            <form action="<?php echo route('products.insert'); ?>" enctype="multipart/form-data" method="post">
+                                <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+                                <div class="form-group">
+                                    <label>Mã khoá học (Tự tăng)</label>
+                                    <input type="text" class="form-control" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect1" >Tên danh mục cha</label>
+                                    <select class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect1" name="category_id">7
+                                        <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <option value="<?php echo e($category['id']); ?>"> <?php echo e($category['name']); ?></option>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tên danh mục con</label>
+                                    <select class="form-control selectpicker"  data-style="btn btn-link" id="exampleFormControlSelect1" name="sub_category_id">7
+                                        <?php $__currentLoopData = $sub_categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $sub): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <option value="<?php echo e($sub['id']); ?>"> <?php echo e($sub['sub_name']); ?></option>
+                                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Tên Sản Phẩm</label>
+                                    <input name="name" type="text" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Giá sản phẩm</label>
+                                    <input name="price" type="text" class="form-control">
+                                </div>
+                                <label>Hình ảnh: </label>
+                                <input name="image" class="form-control" type="file">
+                                <div class="form-group">
+                                    <label>Số lượng</label>
+                                    <input name="quantity" type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Giảm giá</label>
+                                    <input name="sale" type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Mô tả sản phẩm</label>
+                                    <br>
+                                    <textarea name="description" class="form-control" id="editor1"></textarea>
+                                    <script src="<?php echo e(asset('public/ckeditor/ckeditor.js')); ?>"></script>
+                                    <script> CKEDITOR.replace('editor1'); </script>
+                                </div>
+                                <button type="submit" class="btn btn-danger">Thêm</button>
+                            </form>
+                            <a class="btn btn-danger" href="view">Danh sách khoá học</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php $__env->stopSection(); ?>
+
+
+
+<?php echo $__env->make('admin.layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\Thangvvpd02424_WEB4012_Assignment\resources\views/admin/pages/products/insert.blade.php ENDPATH**/ ?>
